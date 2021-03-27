@@ -1,0 +1,130 @@
+.form {
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    &__control {
+        width: 100%;
+        height: 4rem;
+        border-radius: 2px;
+        border: none;
+    }
+
+    &__input {
+        border-bottom: 3px solid transparent;
+        background-color: rgba($color-white, 0.5);
+        padding: 1.5rem 2rem;
+
+        &:focus {
+            outline: none;
+            border-bottom: 3px solid $color-green;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-3;
+        }
+
+        &::-moz-placeholder {
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__label {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    &__label--checkbox,
+    &__label--radio {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+        background-color: rgba($color-white, 0.5);
+        border-radius: 2px;
+        margin-bottom: 1rem;
+        line-height: 1.8;
+    }
+
+    &__input-radio {
+        margin-right: 1rem;
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
+
+        &:checked ~ span {
+            color: $color-secondary-light;
+        }
+    }
+
+    &__input-checkbox {
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
+
+        &:checked ~ span {
+            color: $color-secondary-light;
+        }
+    }
+
+    &__select {
+        border-bottom: 3px solid transparent;
+        background-color: rgba($color-white, 0.5);
+        padding: 0 2rem;
+
+        // option {
+        //     background-color: rgba($color-white, 0.5);
+        //     padding: 0 2rem;
+        //     border: none;
+        // }
+    }
+
+    &__input--textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 2px;
+        border: none;
+        padding: 1.5rem 2rem;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        border-bottom: 3px solid transparent;
+    }
+
+    &__submit-button {
+        &,
+        &:link,
+        &:visited {
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+            background-color: $color-green;
+            border: none;
+            border-radius: 2px;
+            color: $color-white;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+            transform: translateY(0.1rem);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+        }
+
+        @include respond(tab-port) {
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: $color-grey-dark-3;
+}
+
+.form {
+    &__header {
+        &--main {
+            font-weight: 700;
+            text-align: center;
+            color: $color-secondary-dark;
+            font-size: 2.8rem;
+            text-shadow: 0 .1rem .1rem rgba($color-black, .5);
+
+            @include respond(tab-port) {
+                font-size: 2rem;
+            }
+        }
+
+        &--sub {
+            font-weight: 600;
+            text-align: center;
+            color: $color-green;
+            font-size: 1.8rem;
+
+            @include respond(tab-port) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__group {
+        li {
+            list-style: square inside none;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__label--checkbox {
+        font-size: 1.2rem;
+    }
+
+    &__label--radio {
+        font-size: 1.2rem;
+    }
+}

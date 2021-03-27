@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>SMK Negeri 1 Balikpapan COVID-19 Screening</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <header class="header u-margin-bottom-medium">
+            <img src="img/logo.png" alt="SMKN 1 Logo" srcset="img/logo.png" class="form__logo">
+            <h1 id="title" class="form__header--main">COVID-19 Student Screening Form</h1>
+            <p id="description" class="form__header--sub">Please answer with honesty to combat the pandemic</p>
+        </header>
+
+        <main>
+            <form id="survey-form">
+                <div class="form__group row">
+                    <label id="name-label" for="name" class="form__label">Name</label>
+                    <input type="text" name="name" id="name" class="form__control form__input" placeholder="Enter your name" minlength="3" required />
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Grade</p>
+                    <select id="dropdown" name="grade" class="form__control form__select" required>
+                            <option disabled selected value>Select current grade</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                </div>
+
+                <div class="form__group row">
+                    <label id="email-label" for="email" class="form__label">E-mail</label>
+                    <input type="email" name="email" id="email" class="form__control form__input" placeholder="Enter your e-mail"  required />
+                </div>
+
+                <div class="form__group row">
+                    <label id="phone-number" for="phone-number" class="form__label">Phone Number</label>
+                    <input type="tel" name="phone-number" id="phone-number" class="form__control form__input" placeholder="Enter your phone number" minlength="5" required/>
+                </div>
+
+                <div class="form__group row">
+                    <label id="number-label" for="number" class="form__label">Age</label>
+                    <input type="number" name="age" id="number" min="10" max="99" class="form__control form__input" placeholder="Age" required/>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Major</p>
+                    <select id="dropdown" name="major" class="form__control form__select" required>
+                        <option disabled selected value>Select your major</option>
+                        <option value="student">Automotive</option>
+                        <option value="job">Machine</option>
+                        <option value="learner">Electrics</option>
+                        <option value="preferNo">Construction & Property</option>
+                        <option value="preferNo">Electronics</option>
+                        <option value="preferNo">Computer & Informatics</option>
+                        <option value="preferNo">Geology & Mining</option>
+                        <option value="preferNo">Geomatics</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Have you experienced any of the following symptoms in the past 48 hours:
+                        <span class="clue">(Check all that apply)</span>
+                    </p>
+                    <div class="col-1-of-2">
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="fever-or-chills" type="checkbox" class="form__input-checkbox" /><span>Fever or chills</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="cough" type="checkbox" class="form__input-checkbox" /><span>Cough</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="shortness-of-breath" type="checkbox" class="form__input-checkbox" /><span>Shortness of breath or difficulty breathing</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="fatigue" type="checkbox" class="form__input-checkbox" /><span>Fatigue</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="body-aches" type="checkbox" class="form__input-checkbox" /><span>Muscle or body aches</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="headache" type="checkbox" class="form__input-checkbox" /><span>Headache</span></label>
+                    </div>
+                    <div class="col-1-of-2">
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="loss-of-taste" type="checkbox" class="form__input-checkbox" /><span>New loss of taste or smell</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="sore-throat" type="checkbox" class="form__input-checkbox" /><span>Sore throat</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="congestion" type="checkbox" class="form__input-checkbox" /><span>Congestion or runny nose</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="nausea" type="checkbox" class="form__input-checkbox" /><span>Nausea or vomiting</span></label>
+                        <label class="form__label form__label--checkbox"><input name="prefer" value="diarrhea" type="checkbox" class="form__input-checkbox" /><span>Diarrhea</span></label>
+                    </div>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Have you been in close physical contact in the last 14 days with:</p>
+                    <ul>
+                        <li>Anyone who is known to have laboratory-confirmed COVID-19?</li>
+                        <li>Anyone who has any symptoms consistent with COVID-19?</li>
+                    </ul>
+                    <label class="form__label form__label--radio"><input name="physical-contact" value="yes" type="radio" class="form__input-radio" checked /><span>Yes</span></label>
+                    <label class="form__label form__label--radio"><input name="physical-contact" value="no" type="radio" class="form__input-radio" /><span>No</span></label>
+                </div>
+
+
+                <div class="form__group row">
+                    <p class="form__label">Are you isolating or quarantining because you may have been exposed to a person with COVID-19 or are worried that you may be sick with COVID-19?</p>
+                    <label class="form__label form__label--radio"><input name="quarantine" value="yes" type="radio" class="form__input-radio" checked /><span>Yes</span></label>
+                    <label class="form__label form__label--radio"><input name="quarantine" value="no" type="radio" class="form__input-radio" /><span>No</span></label>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Are you currently waiting on the results of a COVID-19 test?</p>
+                    <label class="form__label form__label--radio"><input name="test-result" value="yes" type="radio" class="form__input-radio" checked /><span>Yes</span></label>
+                    <label class="form__label form__label--radio"><input name="test-result" value="no" type="radio" class="form__input-radio" /><span>No</span></label>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Have you traveled in the past 10 days?</p>
+                    <label class="form__label form__label--radio"><input name="travel" value="yes" type="radio" class="form__input-radio" checked /><span>Yes</span></label>
+                    <label class="form__label form__label--radio"><input name="travel" value="no" type="radio" class="form__input-radio" /><span>No</span></label>
+                </div>
+
+                <div class="form__group row">
+                    <p class="form__label">Can you tell your business why are you entering the school area?</p>
+                    <textarea id="statement" class="form__input form__input--textarea" name="comment" rows="5" placeholder="Enter your statement here..." required minlength="10"></textarea>
+                </div>
+
+                <div class="form__group row">
+                    <button type="submit" id="submit" class="form__submit-button">Submit</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
